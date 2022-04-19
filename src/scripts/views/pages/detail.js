@@ -1,4 +1,4 @@
-import RestaurantApiSource from '../../data/restaurantapi-source';
+import RestaurantApiSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
 import { restoDetail } from '../templates/template-creator';
 

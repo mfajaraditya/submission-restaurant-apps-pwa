@@ -1,4 +1,4 @@
-import RestaurantApiSource from '../../data/restaurantapi-source';
+import RestaurantApiSource from '../../data/restaurant-source';
 import { restoItem } from '../templates/template-creator';
 
 const Home = {
