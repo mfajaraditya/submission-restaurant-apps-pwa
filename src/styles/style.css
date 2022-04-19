@@ -168,7 +168,7 @@ main {
 }
 
 /*
-     Movie
+     Resto
    */
 
 .resto {
@@ -190,6 +190,26 @@ main {
 }
 
 /*
+   Like
+*/
+.like {
+     font-size: 18px;
+     position: fixed;
+     bottom: 16px;
+     right: 16px;
+     background-color: #db0000;
+     color: white;
+     border: 0;
+     border-radius: 50%;
+     width: 55px;
+     height: 55px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+/*
      Footer
    */
 
@@ -209,3 +229,4 @@ footer p a {
   font-weight: bolder;
   text-decoration: none;
 }
+

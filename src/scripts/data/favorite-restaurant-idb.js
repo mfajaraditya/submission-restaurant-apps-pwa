@@ -1,15 +1,15 @@
 import { openDB } from 'idb';
+import CONFIG from '../globals/config';
 
-const STORE_NAME = 'restos-store';
-const OBJECT_STORE_NAME = 'restos';
+const { DATABASE_NAME, DATABASE_VERSION, OBJECT_STORE_NAME } = CONFIG;
 
-const dbPromise = openDB(STORE_NAME, 1, {
+const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
   upgrade(database) {
     database.createObjectStore(OBJECT_STORE_NAME, { keyPath: 'id', autoIncrement: true });
   },
 });
 
-const Database = {
+const FavoriteRestaurantIdb = {
   async getResto(id) {
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
@@ -17,9 +17,6 @@ const Database = {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
   async putResto(resto) {
-    return (await dbPromise).add(OBJECT_STORE_NAME, resto);
-  },
-  async updateResto(resto) {
     return (await dbPromise).put(OBJECT_STORE_NAME, resto);
   },
   async deleteResto(id) {
@@ -27,4 +24,4 @@ const Database = {
   },
 };
 
-export default Database;
+export default FavoriteRestaurantIdb;

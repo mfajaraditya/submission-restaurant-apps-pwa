@@ -29,6 +29,7 @@
     "html-webpack-plugin": "^4.3.0",
     "idb": "^7.0.1",
     "regenerator-runtime": "^0.13.9",
+    "serviceworker-webpack-plugin": "^1.0.1",
     "style-loader": "^1.2.1",
     "webpack-cli": "^4.9.2"
   }
