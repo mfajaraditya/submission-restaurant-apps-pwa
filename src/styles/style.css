@@ -100,7 +100,7 @@ main {
 }
 
 /*
-     Movies
+     Restos
    */
 
 .restos {
@@ -209,6 +209,18 @@ main {
      justify-content: center;
  }
 
+ /*
+      Review
+ */
+
+
+.review-header{
+  padding-top: 60px;
+}
+
+.resto-review{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 /*
      Footer
    */
