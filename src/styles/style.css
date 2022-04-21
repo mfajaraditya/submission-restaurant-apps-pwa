@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,7 +11,7 @@ html {
 }
 
 body {
-  font-family: "McLaren", cursive;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: #fecd45;
   min-height: 100vh;
   display: flex;
@@ -30,6 +33,7 @@ body {
   z-index: 99;
   height: 79px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .app-bar .app-bar__menu {
@@ -48,6 +52,7 @@ body {
 .app-bar .app-bar__brand {
   display: flex;
   align-items: center;
+  font-family: 'Zen Antique Soft', serif;
 }
 
 .app-bar .app-bar__brand h1 {
@@ -60,12 +65,14 @@ body {
 .app-bar .app-bar__navigation {
   position: absolute;
   top: 50px;
-  left: -180px;
+  left: -100px;
   width: 150px;
   transition: all 0.3s;
   padding: 8px;
   background-color: #2568fb;
   overflow: hidden;
+  font-size: 38px;
+  font-family: 'Zen Antique Soft', serif;
 }
 
 .app-bar .app-bar__navigation.open {
@@ -114,6 +121,7 @@ main {
   font-weight: bold;
   font-size: 35px;
   color: #2568FB;
+  padding-top: 20px;
 }
 
 /*
@@ -128,7 +136,7 @@ main {
 }
 
 /*
-     Movie Item
+     Resto Item
    */
 
 .resto-item {
@@ -185,7 +193,7 @@ main {
 }
 
 /*
-     Resto
+     Resto Detail
    */
 
 .resto {
@@ -195,15 +203,58 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #BAFED0;
 }
 
-.resto .resto__poster {
+.resto .detail__poster img{
   width: 100%;
-  max-width: 400px;
 }
 
-.resto .resto__info h4 {
-  margin: 8px 0;
+.resto .resto__name {
+  padding: 20px 0 14px 0;
+  font-size: 25px;
+}
+
+.resto .resto__address {
+  padding-bottom: 6px;
+  font-size: 22px;
+  height: 36px;
+}
+
+.resto .resto__city {
+  padding-bottom: 6px;
+  font-size: 22px;
+  height: 36px;
+}
+
+.resto .resto__desc {
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+.resto .resto__header_foods{
+  font-size: 22px;
+  height: 44px;
+}
+
+.resto .resto__header_drinks{
+  font-size: 22px;
+  height: 44px;
+}
+
+.resto .resto__menus_foods {
+  padding-bottom: 17px;
+  font-size: 22px;
+  height: 100%;
+}
+
+.resto .resto__menus_drinks {
+  font-size: 22px;
+  height: 100%;
+  padding-bottom: 30px;
 }
 
 /*
@@ -215,7 +266,7 @@ main {
      bottom: 16px;
      right: 16px;
      background-color: #db0000;
-     color: white;
+     color: black;
      border: 0;
      border-radius: 50%;
      width: 55px;
@@ -227,17 +278,52 @@ main {
  }
 
  /*
-      Review
+ Review
  */
 
+ .resto-reviews{
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+  display: grid;
+  grid-gap: 1em;
+  padding: 2em 2em 2em 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+ }
 
-.review-header{
-  padding-top: 60px;
-}
+ .header-reviews {
+   font-size: 30px;
+   height: 44px;
+ }
 
-.resto-review{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+ .grid-review{
+   background-color: #737373;
+   border-radius: .5em;
+   color: white;
+ }
+
+ .review-review {
+   padding: 1em;
+
+ }
+
+ .review-name {
+   height: 44px;
+   font-size: 20px;
+ }
+
+ .review-date {
+  font-size: 20px;
+  height: 44px;
+ }
+
+ .review-review {
+  font-size: 20px;
+ }
+
 /*
      Footer
    */
@@ -251,11 +337,13 @@ footer p {
   text-align: center;
   color: white;
   font-size: 20px;
+  height: 44px;
 }
 
 footer p a {
   color: white;
   font-weight: bolder;
   text-decoration: none;
+  height: 44px;
 }
 

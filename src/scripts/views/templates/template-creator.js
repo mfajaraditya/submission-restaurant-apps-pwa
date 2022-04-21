@@ -2,53 +2,36 @@ import CONFIG from '../../globals/config';
 
 const restoDetail = (resto) => `
 <div class="detail">
-  <div>
+  <div class="detail__poster">
     <img class="resto__poster" src="${
   CONFIG.BASE_IMAGE_URL + resto.pictureId
 }" alt="${resto.name}" />
   </div>
   <div class="resto__info">
-    <h2 class="resto__name">${resto.name}</h2>
-    <h3>Detail</h3>
-      <p class="resto__address">${resto.address}</p>
-      <p class="resto__city">${resto.city}</p>
-      <p class="resto__desc">${resto.description}</p>
-      <h4>Food Menu: </h4>
+    <h2 class="resto__name">Nama Restoran: ${resto.name}</h2>
+      <p class="resto__address">Alamat: ${resto.address}</p>
+      <p class="resto__city">Kota: ${resto.city}</p>
+      <p class="resto__desc">Deskripsi: ${resto.description}</p>
+      <h4 class="resto__header_foods">Food Menu: </h4>
       <p class="resto__menus_foods">${resto.menus.foods.map(
     (food) => food.name,
   )}</p>
-    <h4>Drink Menu: </h4>
+    <h4 class="resto__header_drinks">Drink Menu: </h4>
       <p class="resto__menus_drinks">${resto.menus.drinks.map(
     (drink) => drink.name,
   )}</p>
   </div>
-  <div class="form-review">
-  <h2 class="review-header">Form Review</h2>
-    <form>
-      <div class="form-margin">
-        <label for="inputName" class="form-label">Name:</label>
-        <input name="inputName" type="text" class="form-input" id="inputName">
-      </div>
-      <div class="form-margin">
-        <label for="inputReview" class="form-label">Review:</label>
-        <input name="inputReview" type="text" class="form-input" id="inputReview">
-      </div>
-      <button id="submit-review" type="submit" class="btn sub-review">Submit</button>
-    </form>
-  </div>
-  <div class="resto-review">
-    ${resto.customerReviews.map((review) => `
-      <div class="grid-review">    
-        <div class="review-review">
-          <p tabindex="0">${review.name}</p>
-          <h5 class="p-city" tabindex="0">${review.date}</h5>
-        </div>
-        <div class="review-review>
-          <p class="p-review" tabindex="0">${review.review}</p>
-        </div>
-      </div>
-    `).join('')}
-    </div>
+  <h3 class="header-reviews">Review Section</h3>
+  <div class="resto-reviews">
+        ${resto.customerReviews.map((review) => `
+          <div class="grid-review">
+            <div class="review-review">
+              <p tabindex="0" class="review-name">${review.name}</p>
+              <p tabindex="0" class="review-date">${review.date}</p>
+              <p tabindex="0" class="review-review">${review.review}</p>
+            </div>
+          </div>
+        `).join('')}
   </div>
 </div>
 `;
