@@ -6,11 +6,13 @@ const Home = {
     return `
     <div class="hero"></div>
      <div class="content">
-     <h2 class="content__heading">Home Page</h2>
+      <div class="content-heading-container">
+        <h2 class="content-heading">Home Page</h2>
+      </div>
      <div id="restos" class="restos">
      </div>
-     </div>
-                `;
+    </div>
+   `;
   },
 
   async afterRender() {

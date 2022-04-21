@@ -2,22 +2,22 @@ import CONFIG from '../../globals/config';
 
 const restoDetail = (resto) => `
 <div class="detail">
-  <div class="detail__poster">
-    <img class="resto__poster" src="${
+  <div class="detail-poster">
+    <img class="resto-poster" src="${
   CONFIG.BASE_IMAGE_URL + resto.pictureId
 }" alt="${resto.name}" />
   </div>
-  <div class="resto__info">
-    <h2 class="resto__name">Nama Restoran: ${resto.name}</h2>
-      <p class="resto__address">Alamat: ${resto.address}</p>
-      <p class="resto__city">Kota: ${resto.city}</p>
-      <p class="resto__desc">Deskripsi: ${resto.description}</p>
-      <h4 class="resto__header_foods">Food Menu: </h4>
-      <p class="resto__menus_foods">${resto.menus.foods.map(
+  <div class="resto-info">
+    <h2 class="resto-name">Nama Restoran: ${resto.name}</h2>
+      <p class="resto-address">Alamat: ${resto.address}</p>
+      <p class="resto-city">Kota: ${resto.city}</p>
+      <p class="resto-desc">Deskripsi: ${resto.description}</p>
+      <h4 class="resto-header_foods">Food Menu: </h4>
+      <p class="resto-menus_foods">${resto.menus.foods.map(
     (food) => food.name,
   )}</p>
-    <h4 class="resto__header_drinks">Drink Menu: </h4>
-      <p class="resto__menus_drinks">${resto.menus.drinks.map(
+    <h4 class="resto-header_drinks">Drink Menu: </h4>
+      <p class="resto-menus_drinks">${resto.menus.drinks.map(
     (drink) => drink.name,
   )}</p>
   </div>
@@ -38,16 +38,16 @@ const restoDetail = (resto) => `
 
 const restoItem = (restos) => `
      <div class="resto-item">
-          <div class="resto-item__header">
-               <img class="resto-item__header__poster" alt="${restos.name}" 
+          <div class="resto-item-header">
+               <img class="resto-item-header-poster" alt="${restos.name}" 
                src="${CONFIG.BASE_IMAGE_URL + restos.pictureId}">
-               <div class="resto-item__header__rating">
-                    <p>&#9733;<span class="resto-item__header__rating__score">${
+               <div class="resto-item-header-rating">
+                    <p>&#9733;<span class="resto-item-header-rating-score">${
   restos.rating
 }</span></p>
                </div>
           </div>
-          <div class="resto-item__content">
+          <div class="resto-item-content">
                <h3><a href="${`/#/detail/${restos.id}`}">${restos.name}</a></h3>
           </div>
      </div>

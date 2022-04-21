@@ -36,12 +36,12 @@ body {
 
 }
 
-.app-bar .app-bar__menu {
+.app-bar .app-bar-menu {
   display: flex;
   align-items: center;
 }
 
-.app-bar .app-bar__menu button {
+.app-bar .app-bar-menu button {
   background-color: transparent;
   border: none;
   font-size: 18px;
@@ -49,20 +49,20 @@ body {
   cursor: pointer;
 }
 
-.app-bar .app-bar__brand {
+.app-bar .app-bar-brand {
   display: flex;
   align-items: center;
   font-family: 'Zen Antique Soft', serif;
 }
 
-.app-bar .app-bar__brand h1 {
+.app-bar .app-bar-brand h1 {
   color: white;
   text-transform: uppercase;
   font-size: 22px;
   user-select: none;
 }
 
-.app-bar .app-bar__navigation {
+.app-bar .app-bar-navigation {
   position: absolute;
   top: 50px;
   left: -100px;
@@ -75,11 +75,11 @@ body {
   font-family: 'Zen Antique Soft', serif;
 }
 
-.app-bar .app-bar__navigation.open {
+.app-bar .app-bar-navigation.open {
   left: 0;
 }
 
-.app-bar .app-bar__navigation ul li a {
+.app-bar .app-bar-navigation ul li a {
   display: inline-block;
   text-decoration: none;
   color: white;
@@ -117,7 +117,7 @@ main {
   min-height: 100%;
 }
 
-.content .content__heading {
+.content .content-heading {
   font-weight: bold;
   font-size: 35px;
   color: #2568FB;
@@ -146,15 +146,15 @@ main {
   overflow: hidden;
 }
 
-.resto-item__header {
+.resto-item-header {
   position: relative;
 }
 
-.resto-item .resto-item__header .resto-item__header__poster {
+.resto-item .resto-item-header .resto-item-header-poster {
   width: 100%;
 }
 
-.resto-item .resto-item__header .resto-item__header__rating {
+.resto-item .resto-item-header .resto-item-header-rating {
   position: absolute;
   padding: 8px;
   bottom: 20px;
@@ -165,26 +165,26 @@ main {
 }
 
 .resto-item
-  .resto-item__header
-  .resto-item__header__rating
-  .resto-item__header__rating__score {
+  .resto-item-header
+  .resto-item_-header-rating
+  .resto-item-header-rating-score {
   margin-left: 10px;
 }
 
-.resto-item .resto-item__content {
+.resto-item .resto-item-content {
   padding: 16px;
 }
 
-.resto-item .resto-item__content h3 {
+.resto-item .resto-item-content h3 {
   margin: 0 0 10px 0;
 }
 
-.resto-item .resto-item__content h3 a {
+.resto-item .resto-item-content h3 a {
   color: #000000;
   text-decoration: none;
 }
 
-.resto-item .resto-item__content p {
+.resto-item .resto-item-content p {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -209,49 +209,49 @@ main {
   background-color: #BAFED0;
 }
 
-.resto .detail__poster img{
+.resto .detail-poster img{
   width: 100%;
 }
 
-.resto .resto__name {
+.resto .resto-name {
   padding: 20px 0 14px 0;
   font-size: 25px;
 }
 
-.resto .resto__address {
+.resto .resto-address {
   padding-bottom: 6px;
   font-size: 22px;
   height: 36px;
 }
 
-.resto .resto__city {
+.resto .resto-city {
   padding-bottom: 6px;
   font-size: 22px;
   height: 36px;
 }
 
-.resto .resto__desc {
+.resto .resto-desc {
   padding-bottom: 10px;
   font-size: 22px;
 }
 
-.resto .resto__header_foods{
+.resto .resto-header-foods{
   font-size: 22px;
   height: 44px;
 }
 
-.resto .resto__header_drinks{
+.resto .resto-header-drinks{
   font-size: 22px;
   height: 44px;
 }
 
-.resto .resto__menus_foods {
+.resto .resto-menus-foods {
   padding-bottom: 17px;
   font-size: 22px;
   height: 100%;
 }
 
-.resto .resto__menus_drinks {
+.resto .resto-menus-drinks {
   font-size: 22px;
   height: 100%;
   padding-bottom: 30px;
@@ -324,6 +324,16 @@ main {
   font-size: 20px;
  }
 
+ /*
+ Favorite Restos
+ */
+
+ .fav-resto {
+   text-align: center;
+   align-items: center;
+   color: black;
+ }
+
 /*
      Footer
    */
@@ -340,10 +350,7 @@ footer p {
   height: 44px;
 }
 
-footer p a {
-  color: white;
+.makan {
   font-weight: bolder;
-  text-decoration: none;
-  height: 44px;
 }
 

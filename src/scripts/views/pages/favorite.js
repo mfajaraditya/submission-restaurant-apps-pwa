@@ -5,18 +5,28 @@ const Favorite = {
   async render() {
     return `
     <div class="content">
-     <h2 class="content__heading">Favorite Page</h2>
-             <div id="restos" class="restos">
-             </div>
-             </div>
+    <h2 class="content-heading">Favorite Page</h2>
+    <div id="restos" class="restos">
+    </div>
+    </div>
              `;
   },
 
   async afterRender() {
     const restos = await FavoriteRestaurantIdb.getAllRestos();
     const restosContainer = document.querySelector('#restos');
-    restos.forEach((resto) => {
-      restosContainer.innerHTML += restoItem(resto);
+    if(restos.length === 0) {
+      restosContainer.innerHTML = `
+        <div class="fav-resto">
+        ====================================== <br/>
+        Favorite Restaurant Not Found!<br/>
+        ======================================
+        </div>
+      `;
+    }
+    const total = restos.length;
+    restos.forEach((resto, index) => {
+      restosContainer.innerHTML += restoItem(resto, index, total);
     });
   },
 };
