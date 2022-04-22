@@ -19,7 +19,7 @@ const Favorite = {
       restosContainer.innerHTML = `
         <div class="fav-resto">
         ====================================== <br/>
-        Favorite Restaurant Not Found!<br/>
+        Restoran favorit anda tidak ditemukan, silahkan tambahkan!<br/>
         ======================================
         </div>
       `;

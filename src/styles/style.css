@@ -29,9 +29,7 @@ body {
   grid-template-columns: auto 1fr auto;
   gap: 10px;
   position: sticky;
-  top: 0;
-  z-index: 99;
-  height: 79px;
+  height: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
 }
@@ -53,6 +51,7 @@ body {
   display: flex;
   align-items: center;
   font-family: 'Zen Antique Soft', serif;
+
 }
 
 .app-bar .app-bar-brand h1 {
@@ -60,6 +59,7 @@ body {
   text-transform: uppercase;
   font-size: 22px;
   user-select: none;
+  padding: 10px 30px 10px 30px;
 }
 
 .app-bar .app-bar-navigation {
@@ -177,7 +177,7 @@ main {
 
 .resto-item .resto-item-content h3 {
   margin: 0 0 10px 0;
-  font-size: 28px;
+    font-size: 28px;
   height: 44px;
 }
 

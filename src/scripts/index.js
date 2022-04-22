@@ -1,6 +1,8 @@
 import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
+import './components/footer-bar';
+import './components/app-bar';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
