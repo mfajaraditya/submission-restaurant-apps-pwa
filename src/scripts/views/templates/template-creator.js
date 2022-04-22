@@ -12,12 +12,12 @@ const restoDetail = (resto) => `
       <p class="resto-address">Alamat: ${resto.address}</p>
       <p class="resto-city">Kota: ${resto.city}</p>
       <p class="resto-desc">Deskripsi: ${resto.description}</p>
-      <h4 class="resto-header_foods">Food Menu: </h4>
-      <p class="resto-menus_foods">${resto.menus.foods.map(
+      <h4 class="resto-header-foods">Food Menu: </h4>
+      <p class="resto-menus-foods">${resto.menus.foods.map(
     (food) => food.name,
   )}</p>
-    <h4 class="resto-header_drinks">Drink Menu: </h4>
-      <p class="resto-menus_drinks">${resto.menus.drinks.map(
+    <h4 class="resto-header-drinks">Drink Menu: </h4>
+      <p class="resto-menus-drinks">${resto.menus.drinks.map(
     (drink) => drink.name,
   )}</p>
   </div>
@@ -48,7 +48,7 @@ const restoItem = (restos) => `
                </div>
           </div>
           <div class="resto-item-content">
-               <h3><a href="${`/#/detail/${restos.id}`}">${restos.name}</a></h3>
+               <h3 class="header-name"><a href="${`/#/detail/${restos.id}`}">${restos.name}</a></h3>
           </div>
      </div>
 `;
