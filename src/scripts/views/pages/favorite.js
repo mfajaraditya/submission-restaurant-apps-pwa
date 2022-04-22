@@ -15,7 +15,7 @@ const Favorite = {
   async afterRender() {
     const restos = await FavoriteRestaurantIdb.getAllRestos();
     const restosContainer = document.querySelector('#restos');
-    if(restos.length === 0) {
+    if (restos.length === 0) {
       restosContainer.innerHTML = `
         <div class="fav-resto">
         ====================================== <br/>
