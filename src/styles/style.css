@@ -187,25 +187,20 @@ main {
   padding: 16px;
 }
 
-.resto-item .resto-item-content h3 {
-  margin: 0 0 10px 0;
-    font-size: 28px;
+.resto-item .resto-item-content h3, a{
+  margin: 0 0 90px 0;
+    font-size: 36px;
   height: 44px;
 }
 
-.resto-item .resto-item-content h3 a {
+.resto-item .resto-item-content a {
   color: #000000;
   text-decoration: none;
-  font-size: 28px;
-  height: 44px;
 }
 
-.resto-item .resto-item-content p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4; /* number of lines to show */
-  -webkit-box-orient: vertical;
+.resto-item .resto-item-content .header-name h3 a{
+  height: 44px;
+  font-size: 2em;
 }
 
 /*

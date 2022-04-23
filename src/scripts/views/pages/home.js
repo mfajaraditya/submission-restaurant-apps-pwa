@@ -4,7 +4,7 @@ import { restoItem } from '../templates/template-creator';
 const Home = {
   async render() {
     return `
-    <div class="hero"></div>
+  
      <div class="content">
       <div class="content-heading-container">
         <h2 class="content-heading">Home Page</h2>
