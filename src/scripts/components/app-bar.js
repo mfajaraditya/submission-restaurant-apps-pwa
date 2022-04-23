@@ -16,7 +16,7 @@ class AppBar extends HTMLElement {
           <ul class="nav-list">
             <li class="nav-item"><a href="#/">Home</a></li>
             <li class="nav-item"><a href="#/favorite">Favorite</a></li>
-            <li class="nav-item"><a href="https://www.linkedin.com/in/m-fajar-aditya/">About Us</a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/m-fajar-aditya/">About</a></li>
           </ul>
         </nav>
         </div>

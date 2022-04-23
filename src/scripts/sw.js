@@ -3,14 +3,14 @@ import CacheHelper from './utils/cache-helper';
 
 const { assets } = global.serviceWorkerOption;
 
-self.addEventListener('install', (event) => {
+this.addEventListener('install', (event) => {
   event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
 });
 
-self.addEventListener('activate', (event) => {
+this.addEventListener('activate', (event) => {
   event.waitUntil(CacheHelper.deleteOldCache());
 });
 
-self.addEventListener('fetch', (event) => {
+this.addEventListener('fetch', (event) => {
   event.respondWith(CacheHelper.revalidateCache(event.request));
 });
