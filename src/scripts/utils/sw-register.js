@@ -5,7 +5,7 @@ const swRegister = async () => {
     await runtime.register();
     return;
   }
-  console.log('Service worker not supported in this browser');
+  console.error('Service worker not supported in this browser'); // eslint-disable-line no-console
 };
 
 export default swRegister;

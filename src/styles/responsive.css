@@ -1,72 +1,292 @@
-@media screen and (min-width: 650px) {
-     .app-bar {
-         grid-template-columns: 1fr auto;
-         padding: 8px 32px;
-     }
-    
-     .app-bar .app-bar__brand h1 {
-         font-size: 1.5em;
-     }
-    
-     .app-bar .app-bar__menu {
-         display: none;
-     }
-    
-     .app-bar .app-bar__navigation {
-         position: static;
-         width: 100%;
-     }
-    
-     .app-bar .app-bar__navigation ul li {
-         display: inline-block;
-     }
-    
-     .app-bar .app-bar__navigation ul li a {
-         display: inline-block;
-         width: 120px;
-         text-align: center;
-         margin: 0;
-     }
-    
-     .restos {
-         grid-template-columns: 1fr 1fr;
-     }
-    
-     .resto {
-         grid-template-columns: auto 1fr;
-     }
-    
-     .resto .resto__title {
-         grid-column-start: 1;
-         grid-column-end: 3;
-     }
-    
-     .resto .resto__overview {
-         grid-column-start: 1;
-         grid-column-end: 3;
-     }
-   }
-    
-   @media screen and (min-width: 800px) {
-     .app-bar .app-bar__brand h1 {
-         font-size: 2em;
-     }
-   }
-    
-   @media screen and (min-width: 850px) {
-     .restos {
-         grid-template-columns: repeat(3, 1fr);
-     }
-   }
-    
-   @media screen and (min-width: 1200px) {
-     .restos {
-         grid-template-columns: repeat(4, 1fr);
-     }
-   }
-    
-   @media screen and (min-width: 1600px) {
-     .restos {
-         grid-template-columns: repeat(5, 1fr);
-     }
-   }
+@media screen and (min-width: 320px) {
+  .app-bar .app-bar-brand h1{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    font-size: 27px;
+  }
+
+  main {
+    position: relative;
+    left: 10px;
+  }
+
+  .restos{
+    position: relative;
+    right: 8px;
+  }
+  .restos .resto-item .resto-item-header-rating p{
+    height: 44px;
+    padding: 4px;
+    font-size: 30em;
+  }
+
+  .restos .resto-item .resto-item-header
+  .resto-item-header-rating  p, span {
+    height: 44px;
+    font-size: 30px;
+  }
+
+  .resto {
+    position: relative;
+    right: 6%;
+    padding: 10px;
+  }
+
+  .resto .resto-address {
+    height: 100%;
+  }
+
+  .resto .resto-city {
+    height: 40px;
+  }
+
+  .resto .detail .resto-reviews {
+    padding: 0;
+  }
+  /* Favorite Page */
+  .restos .fav-resto {
+    position: relative;
+    right: 32px;
+    font-size: smaller;
+  }
+
+
+  footer p {
+    position: relative;
+    left: -5px;
+    text-align: center;
+  }
+
+  footer span {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .app-bar .app-bar-brand {
+    position: relative;
+    left: 10px;
+  }
+
+  .app-bar .app-bar-brand h1 {
+    font-size: 2em;
+  }
+
+  #hamburger-button {
+    position: relative;
+    right: 15px;
+  }
+
+  .resto .resto-address {
+    height: 40px;
+  }
+
+  .resto .detail .resto-reviews {
+    padding: 0;
+  }
+
+  .restos .fav-resto {
+    position: relative;
+    left: 1px;
+  }
+
+  footer p, span{
+    font-size: 21px;
+  }
+
+  .makan {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .app-bar .app-bar-brand h1{
+    font-size: 2em;
+    position: relative;
+    top: 20px;
+    left: 35px;
+  }
+
+  .resto {
+    width: 100%;
+  }
+
+  .resto .resto-address {
+    font-size: 24px;
+    height: 44px;
+  }
+
+  .resto .resto-city {
+    font-size: 24px;
+    height: 44px;
+  }
+
+  .resto .resto-reviews {
+    width: 100%;
+  }
+
+  footer p{
+    font-size: 22px;
+  }
+
+  .makan {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+
+  .app-bar .app-bar-brand  {
+    font-size: 2em;
+    position: relative;
+    bottom: 10px;
+    left: 45px;
+  }
+
+  .app-bar .app-bar-menu {
+    display: none;
+  }
+
+  .app-bar .app-bar-navigation {
+    position: static;
+    width: 100%;
+  }
+
+  .app-bar .app-bar-navigation ul li {
+    display: inline-block;
+  }
+
+  .app-bar .app-bar-navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+    font-size: -0.2em;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .restos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resto .resto-address {
+    height: 41px;
+  }
+
+  .resto .resto-city {
+    height: 41px;
+  }
+
+  .resto .resto-header-foods {
+    font-size: 22px;
+  }
+
+  .resto .resto-header-foods {
+    font-size: 22px;
+  }
+
+  .resto .resto-menus-foods {
+    padding-bottom: 17px;
+    font-size: 22px;
+  }
+
+  .resto .resto-menus-drinks {
+    font-size: 22px;
+    height: 100%;
+    padding-bottom: 30px;
+  }
+
+  .resto {
+    position: relative;
+    right: 20px;
+    padding: 5px;
+  }
+
+  .restos .fav-resto {
+    position: relative;
+    font-size: 1.7em;
+    left: 28px;
+  }
+
+  footer p, span{
+    font-size: 30px;
+  }
+
+  .makan {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .app-bar .app-bar-brand h1 {
+    font-size: 2.3em;
+    position: relative;
+    left: 15%;
+  }
+
+  .app-bar .app-bar-navigation ul li a {
+    font-size: 27px;
+    padding: 0 70px 0 70px;
+  }
+
+  .restos .fav-resto {
+    position: relative;
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .restos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #main-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .app-bar .app-bar-brand {
+    position: relative;
+    left: 14%;
+  }
+
+  .resto {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .restos .fav-resto {
+    position: relative;
+   left: 100px;
+    font-size: 50px;
+  }
+
+  footer p {
+    font-size: 34px;
+  }
+
+  .makan {
+    font-size: 34px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .restos {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

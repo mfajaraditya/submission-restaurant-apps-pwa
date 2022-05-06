@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: "McLaren", cursive;
+html, body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: #fecd45;
-  min-height: 100vh;
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -22,18 +32,16 @@ body {
   grid-template-columns: auto 1fr auto;
   gap: 10px;
   position: sticky;
-  top: 0;
-  z-index: 99;
-  height: 79px;
+  height: 100%;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-.app-bar .app-bar__menu {
+.app-bar .app-bar-menu {
   display: flex;
   align-items: center;
 }
 
-.app-bar .app-bar__menu button {
+.app-bar .app-bar-menu button {
   background-color: transparent;
   border: none;
   font-size: 18px;
@@ -41,44 +49,73 @@ body {
   cursor: pointer;
 }
 
-.app-bar .app-bar__brand {
+.app-bar .app-bar-brand {
   display: flex;
   align-items: center;
+  font-family: 'Zen Antique Soft', serif;
+
 }
 
-.app-bar .app-bar__brand h1 {
+.app-bar .app-bar-brand h1 {
+  position: relative;
   color: white;
   text-transform: uppercase;
-  font-size: 22px;
   user-select: none;
+  padding: 10px 30px 10px 30px;
 }
 
-.app-bar .app-bar__navigation {
+.app-bar .app-bar-navigation {
   position: absolute;
-  top: 50px;
-  left: -180px;
+  top: 110px;
+  left: -177px;
   width: 150px;
   transition: all 0.3s;
   padding: 8px;
   background-color: #2568fb;
   overflow: hidden;
+  font-size: 38px;
+  font-family: 'Zen Antique Soft', serif;
+ text-align: center;
+ 
 }
 
-.app-bar .app-bar__navigation.open {
+.app-bar .app-bar-navigation.open {
   left: 0;
 }
 
-.app-bar .app-bar__navigation ul li a {
+.app-bar .app-bar-navigation ul li a {
   display: inline-block;
   text-decoration: none;
   color: white;
   padding: 8px;
   margin-bottom: 5px;
   width: 100%;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 
+.app-bar .app-bar-menu #hamburger-button {
+  height: 44px;
+  width: 44px;
+  font-size: 28px;
+}
+
+/*
+  Hero
+*/
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  text-align: center;
+  background-image: url("/images/heros/hero.jpg");
+  background-position: center;
+}
 /*
      Main Content
    */
@@ -93,10 +130,11 @@ main {
   min-height: 100%;
 }
 
-.content .content__heading {
+.content .content-heading {
   font-weight: bold;
   font-size: 35px;
   color: #2568FB;
+  padding-top: 20px;
 }
 
 /*
@@ -111,25 +149,25 @@ main {
 }
 
 /*
-     Movie Item
+     Resto Item
    */
 
 .resto-item {
   width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   overflow: hidden;
 }
 
-.resto-item__header {
+.resto-item-header {
   position: relative;
 }
 
-.resto-item .resto-item__header .resto-item__header__poster {
+.resto-item .resto-item-header .resto-item-header-poster {
   width: 100%;
 }
 
-.resto-item .resto-item__header .resto-item__header__rating {
+.resto-item .resto-item-header .resto-item-header-rating {
   position: absolute;
   padding: 8px;
   bottom: 20px;
@@ -140,35 +178,34 @@ main {
 }
 
 .resto-item
-  .resto-item__header
-  .resto-item__header__rating
-  .resto-item__header__rating__score {
+  .resto-item-header
+  .resto-item_-header-rating
+  .resto-item-header-rating-score {
   margin-left: 10px;
 }
 
-.resto-item .resto-item__content {
+.resto-item .resto-item-content {
   padding: 16px;
 }
 
-.resto-item .resto-item__content h3 {
-  margin: 0 0 10px 0;
+.resto-item .resto-item-content h3, a{
+  margin: 0 0 90px 0;
+    font-size: 36px;
+  height: 44px;
 }
 
-.resto-item .resto-item__content h3 a {
+.resto-item .resto-item-content a {
   color: #000000;
   text-decoration: none;
 }
 
-.resto-item .resto-item__content p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4; /* number of lines to show */
-  -webkit-box-orient: vertical;
+.resto-item .resto-item-content .header-name h3 a{
+  height: 44px;
+  font-size: 2em;
 }
 
 /*
-     Resto
+     Resto Detail
    */
 
 .resto {
@@ -178,15 +215,59 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #BAFED0;
 }
 
-.resto .resto__poster {
+.resto .detail-poster img{
   width: 100%;
-  max-width: 400px;
 }
 
-.resto .resto__info h4 {
-  margin: 8px 0;
+.resto .resto-name {
+  padding: 20px 0 14px 0;
+  font-size: 25px;
+}
+
+.resto .resto-address {
+  padding-bottom: 6px;
+  font-size: 22px;
+  height: 36px;
+}
+
+.resto .resto-city {
+  padding-bottom: 6px;
+  font-size: 22px;
+  height: 36px;
+}
+
+.resto .resto-desc {
+  padding-bottom: 10px;
+  font-size: 22px;
+  text-align: justify;
+}
+
+.resto .resto-header-foods{
+  font-size: 22px;
+  height: 44px;
+}
+
+.resto .resto-header-drinks{
+  font-size: 22px;
+  height: 44px;
+}
+
+.resto .resto-menus-foods {
+  padding-bottom: 17px;
+  font-size: 22px;
+  height: 100%;
+}
+
+.resto .resto-menus-drinks {
+  font-size: 22px;
+  height: 100%;
+  padding-bottom: 30px;
 }
 
 /*
@@ -198,7 +279,7 @@ main {
      bottom: 16px;
      right: 16px;
      background-color: #db0000;
-     color: white;
+     color: black;
      border: 0;
      border-radius: 50%;
      width: 55px;
@@ -210,17 +291,62 @@ main {
  }
 
  /*
-      Review
+ Review
  */
 
+ .resto-reviews{
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+  display: grid;
+  grid-gap: 1em;
+  padding: 2em 2em 2em 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+ }
 
-.review-header{
-  padding-top: 60px;
-}
+ .header-reviews {
+   font-size: 30px;
+   height: 44px;
+ }
 
-.resto-review{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+ .grid-review{
+   background-color: #737373;
+   border-radius: .5em;
+   color: white;
+ }
+
+ .review-review {
+   padding: 1em;
+
+ }
+
+ .review-name {
+   height: 44px;
+   font-size: 20px;
+ }
+
+ .review-date {
+  font-size: 20px;
+  height: 44px;
+ }
+
+ .review-review {
+  font-size: 20px;
+ }
+
+ /*
+ Favorite Restos
+ */
+
+ .fav-resto {
+   text-align: center;
+   align-items: center;
+   color: black;
+ }
+
 /*
      Footer
    */
@@ -234,11 +360,25 @@ footer p {
   text-align: center;
   color: white;
   font-size: 20px;
+  height: 44px;
 }
 
-footer p a {
-  color: white;
+.makan {
   font-weight: bolder;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 100;
   text-decoration: none;
 }
 
+.skip-link:focus {
+  top: 100px;
+}
