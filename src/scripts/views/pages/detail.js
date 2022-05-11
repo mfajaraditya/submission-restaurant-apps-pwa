@@ -1,6 +1,6 @@
 import RestaurantApiSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import { restoDetail } from '../templates/template-creator';
 
 const Detail = {
@@ -18,7 +18,7 @@ const Detail = {
 
     restoContainer.innerHTML = restoDetail(resto);
 
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {
         id: resto.id,
