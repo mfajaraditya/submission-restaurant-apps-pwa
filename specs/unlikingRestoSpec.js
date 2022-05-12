@@ -2,11 +2,10 @@
 import FavoriteRestaurantIdb from '../src/scripts/data/favorite-restaurant-idb';
 import * as TestFactories from './helpers/testFactories';
 
-const addLikeButtonContainer = () => {
-  document.body.innerHTML = '<div id="likeButtonContainer"></div>';
-};
-
 describe('Unliking A Resto', () => {
+  const addLikeButtonContainer = () => {
+    document.body.innerHTML = '<div id="likeButtonContainer"></div>';
+  };
   beforeEach(async () => {
     addLikeButtonContainer();
     await FavoriteRestaurantIdb.putResto({ id: 1 });
@@ -19,7 +18,7 @@ describe('Unliking A Resto', () => {
   it('should display unlike widget when the resto has been liked', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
 
-    expect(document.querySelector('#likeButton')).toBeTruthy();
+    expect(document.querySelector('[aria-label="unlike this resto"]')).toBeFalsy();
   });
 
   it('should not display like widget when the resto has been liked', async () => {
@@ -32,15 +31,15 @@ describe('Unliking A Resto', () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-
-    expect(await FavoriteRestaurantIdb.getAllRestos()).toEqual([]);
+    const resto = await FavoriteRestaurantIdb.getAllRestos();
+    expect(resto).toEqual([]);
+    FavoriteRestaurantIdb.deleteResto(1);
   });
 
   it('should not throw error if the unliked resto is not in the list', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
     await FavoriteRestaurantIdb.deleteResto(1);
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-
     expect(await FavoriteRestaurantIdb.getAllRestos()).toEqual([]);
   });
 });

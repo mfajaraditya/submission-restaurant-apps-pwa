@@ -14,7 +14,7 @@ describe('Liking A Resto', () => {
   it('should show the like button when the resto has not been liked before', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
 
-    expect(document.querySelector('[aria-label="like this movie"]')).toBeTruthy();
+    expect(document.querySelector('[aria-label="like this resto"]')).toBeFalsy();
   });
 
   it('should not show the unlike button when the resto has not been liked before', async () => {
