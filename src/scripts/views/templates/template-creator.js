@@ -48,7 +48,7 @@ const restoItem = (restos) => `
                </div>
           </div>
           <div class="resto-item-content">
-               <h3 class="header-name"><a href="${`/#/detail/${restos.id}`}">${restos.name}</a></h3>
+               <h3 class="header-name" id="header-name"><a href="${`/#/detail/${restos.id}`}">${restos.name}</a></h3>
           </div>
      </div>
 `;

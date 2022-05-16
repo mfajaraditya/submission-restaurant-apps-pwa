@@ -1,18 +1,12 @@
 /* eslint-disable no-undef */
 const assert = require('assert');
 
-Feature('Liking Restos');
-
+Feature('Unliking Restos');
 Before(({ I }) => {
   I.amOnPage('/#/favorite');
 });
 
-Scenario('showing empty liked restos', ({ I }) => {
-  I.seeElement('#query');
-  I.see('Tidak ada restoran untuk ditampilkan', '.resto-item__not__found');
-});
-
-Scenario('liking one resto', async ({ I }) => {
+Scenario('Unliking one resto', async ({ I }) => {
   I.see('Tidak ada restoran untuk ditampilkan', '.restos');
   I.amOnPage('/');
   I.waitForElement('.resto-item');
@@ -31,4 +25,10 @@ Scenario('liking one resto', async ({ I }) => {
 
   const favoritedRestoName = await I.grabTextFrom('.header-name');
   assert.strictEqual(firstRestoName, favoritedRestoName);
+
+  const firstRestoLiking = locate('.header-name').first();
+  I.click(firstRestoLiking);
+  I.seeElement('#unlikeButton');
+  I.amOnPage('/#/favorite');
+  I.see('Tidak ada restoran untuk ditampilkan', '.restos');
 });
